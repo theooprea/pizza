@@ -34,25 +34,69 @@ namespace pizza
             if(pizzas.SelectedIndex != -1)
             {
                 selection = pizzas.SelectedItem.ToString();
-                final = "Pizza" + " " + selection + "\n";
+                final = "Pizza" + selection + "\r\n";
                 if(selection == "Quatro Stagionni")
                 {
-                    //cazul asta
+                    final = final + "sos de rosii, mozzarella, sunca, salam uscat, ciuperci,masline\r\n500g\r\n18.5lei";
                 }
                 if(selection == "Quatro Formaggi")
                 {
-
+                    final = final + "sos de rosii, mozzarella, ementhaler, gorgonzola, parmezan\r\n550g\r\n19.5lei";
                 }
-                if(selection == "Hawaii")
+                if(selection == "Afluente")
                 {
-
+                    final = final + "sos de rosii, mozzarella, pui, rosii, ardei, curry, chilli, ceapa\r\n550g\r\n18.5lei";
                 }
                 if(selection == "Diavola")
                 {
-
+                    final = final + "sos de rosii, mozzarella, chorizo, ciuperci, ardei iute, chilli\r\n450g\r\n18lei";
+                }
+                if (selection == "Suprema")
+                {
+                    final = final + "sos de rosii, mozzarella, sunca, bacon, carnaciori, ceapa, sos BBQ\r\n600g\r\n19lei";
+                }
+                if (selection == "Colosseum")
+                {
+                    final = final + "sos de rosii, mozzarella, pui, ardei, rosii, branza feta\r\n500g\r\n17.5lei";
                 }
                 pizzacurenta.Text = final;
             }
         }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            string selection;
+            string final;
+            float pret = 0;
+            if(pizzas.SelectedIndex != -1)
+            {
+                selection = pizzas.SelectedItem.ToString();
+                final = "Order:" + "\r\n";
+                final = final + "Pizza " + selection + ", ";
+                if (selection == "Quatro Stagionni")
+                {
+                    
+                }
+                if (selection == "Quatro Formaggi")
+                {
+                    final = final + "sos de rosii, mozzarella, ementhaler, gorgonzola, parmezan\r\n550g\r\n19.5lei";
+                }
+                if (selection == "Afluente")
+                {
+                    final = final + "sos de rosii, mozzarella, pui, rosii, ardei, curry, chilli, ceapa\r\n550g\r\n18.5lei";
+                }
+                if (selection == "Diavola")
+                {
+                    final = final + "sos de rosii, mozzarella, chorizo, ciuperci, ardei iute, chilli\r\n450g\r\n18lei";
+                }
+                if (selection == "Suprema")
+                {
+                    final = final + "sos de rosii, mozzarella, sunca, bacon, carnaciori, ceapa, sos BBQ\r\n600g\r\n19lei";
+                }
+                if (selection == "Colosseum")
+                {
+                    final = final + "sos de rosii, mozzarella, pui, ardei, rosii, branza feta\r\n500g\r\n17.5lei";
+                }
+            }
     }
 }
