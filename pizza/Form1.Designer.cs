@@ -32,8 +32,13 @@
             this.button1 = new System.Windows.Forms.Button();
             this.pizzacurenta = new System.Windows.Forms.TextBox();
             this.button2 = new System.Windows.Forms.Button();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.order = new System.Windows.Forms.TextBox();
+            this.pretcurent = new System.Windows.Forms.TextBox();
+            this.button3 = new System.Windows.Forms.Button();
+            this.ofertazilei = new System.Windows.Forms.TextBox();
+            this.pretredus = new System.Windows.Forms.TextBox();
+            this.testbox = new System.Windows.Forms.TextBox();
+            this.testbox2 = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // pizzas
@@ -50,7 +55,7 @@
             "Colosseum"});
             this.pizzas.Location = new System.Drawing.Point(77, 35);
             this.pizzas.Name = "pizzas";
-            this.pizzas.Size = new System.Drawing.Size(278, 190);
+            this.pizzas.Size = new System.Drawing.Size(278, 221);
             this.pizzas.TabIndex = 0;
             // 
             // button1
@@ -70,7 +75,7 @@
             this.pizzacurenta.Location = new System.Drawing.Point(840, 35);
             this.pizzacurenta.Multiline = true;
             this.pizzacurenta.Name = "pizzacurenta";
-            this.pizzacurenta.Size = new System.Drawing.Size(384, 190);
+            this.pizzacurenta.Size = new System.Drawing.Size(384, 221);
             this.pizzacurenta.TabIndex = 2;
             this.pizzacurenta.Text = "Detalii";
             this.pizzacurenta.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
@@ -78,7 +83,7 @@
             // button2
             // 
             this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 19.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.Location = new System.Drawing.Point(526, 158);
+            this.button2.Location = new System.Drawing.Point(526, 109);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(170, 67);
             this.button2.TabIndex = 3;
@@ -86,30 +91,84 @@
             this.button2.UseVisualStyleBackColor = true;
             this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
-            // textBox1
+            // order
             // 
-            this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.Location = new System.Drawing.Point(77, 343);
-            this.textBox1.Multiline = true;
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(278, 138);
-            this.textBox1.TabIndex = 4;
+            this.order.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.order.Location = new System.Drawing.Point(77, 317);
+            this.order.Multiline = true;
+            this.order.Name = "order";
+            this.order.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
+            this.order.Size = new System.Drawing.Size(278, 164);
+            this.order.TabIndex = 4;
             // 
-            // textBox2
+            // pretcurent
             // 
-            this.textBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox2.Location = new System.Drawing.Point(480, 390);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(367, 34);
-            this.textBox2.TabIndex = 5;
+            this.pretcurent.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.pretcurent.Location = new System.Drawing.Point(480, 317);
+            this.pretcurent.Name = "pretcurent";
+            this.pretcurent.Size = new System.Drawing.Size(290, 34);
+            this.pretcurent.TabIndex = 5;
+            this.pretcurent.Text = "Pret neredus: 0 lei";
+            this.pretcurent.TextChanged += new System.EventHandler(this.pretcurent_TextChanged);
+            // 
+            // button3
+            // 
+            this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button3.Location = new System.Drawing.Point(526, 182);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(170, 74);
+            this.button3.TabIndex = 6;
+            this.button3.Text = "Sterge comanda";
+            this.button3.UseVisualStyleBackColor = true;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
+            // 
+            // ofertazilei
+            // 
+            this.ofertazilei.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ofertazilei.Location = new System.Drawing.Point(480, 397);
+            this.ofertazilei.Multiline = true;
+            this.ofertazilei.Name = "ofertazilei";
+            this.ofertazilei.Size = new System.Drawing.Size(290, 84);
+            this.ofertazilei.TabIndex = 7;
+            this.ofertazilei.TextChanged += new System.EventHandler(this.textBox1_TextChanged_1);
+            // 
+            // pretredus
+            // 
+            this.pretredus.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.pretredus.Location = new System.Drawing.Point(480, 357);
+            this.pretredus.Name = "pretredus";
+            this.pretredus.Size = new System.Drawing.Size(290, 34);
+            this.pretredus.TabIndex = 8;
+            this.pretredus.Text = "Pret redus: 0 lei";
+            // 
+            // testbox
+            // 
+            this.testbox.Location = new System.Drawing.Point(840, 317);
+            this.testbox.Multiline = true;
+            this.testbox.Name = "testbox";
+            this.testbox.Size = new System.Drawing.Size(384, 74);
+            this.testbox.TabIndex = 9;
+            // 
+            // testbox2
+            // 
+            this.testbox2.Location = new System.Drawing.Point(840, 407);
+            this.testbox2.Multiline = true;
+            this.testbox2.Name = "testbox2";
+            this.testbox2.Size = new System.Drawing.Size(384, 74);
+            this.testbox2.TabIndex = 10;
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1264, 626);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.testbox2);
+            this.Controls.Add(this.testbox);
+            this.Controls.Add(this.pretredus);
+            this.Controls.Add(this.ofertazilei);
+            this.Controls.Add(this.button3);
+            this.Controls.Add(this.pretcurent);
+            this.Controls.Add(this.order);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.pizzacurenta);
             this.Controls.Add(this.button1);
@@ -128,8 +187,13 @@
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.TextBox pizzacurenta;
         private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox order;
+        private System.Windows.Forms.TextBox pretcurent;
+        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.TextBox ofertazilei;
+        private System.Windows.Forms.TextBox pretredus;
+        private System.Windows.Forms.TextBox testbox;
+        private System.Windows.Forms.TextBox testbox2;
     }
 }
 
