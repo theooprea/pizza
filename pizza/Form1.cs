@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Windows.Forms;
+using Tulpep.NotificationWindow;
 
 namespace pizza
 {
@@ -29,6 +30,10 @@ namespace pizza
             }
             ofertazilei.Text = ofertazilei.Text + oferta;
             ofertazilei.Text = ofertazilei.Text + " " + ofertazilei.Text[15];
+            PopupNotifier popup = new PopupNotifier();
+            popup.TitleText = "Oferta zilei";
+            popup.ContentText = oferta;
+            popup.Popup();
         }
 
         private void textBox1_TextChanged(object sender, EventArgs e)
@@ -75,7 +80,6 @@ namespace pizza
         private void button2_Click(object sender, EventArgs e)
         {
             int i, j;
-            testbox.Text = "";
             string selection;
             string previous;
             string final;
@@ -137,7 +141,6 @@ namespace pizza
             int reduceri = pizze / stackpizza;
             double[] vector = new double[50];
             string[] words = order.Text.Split(';');
-            testbox.Text = "";
             for (i = 0; i < pizze; i++)
             {
                 string Value = "Pizza Quatro Stagionni";
@@ -183,17 +186,12 @@ namespace pizza
                     }
                 }
             }
-            for(i = 0; i < pizze; i++)
-            {
-                testbox.Text += vector[i];
-            }
-            //testbox2.Text = reduceri.ToString() + " " + pret.ToString();
             double pretredu = pret;
             for(i = 0; i < reduceri; i++)
             {
                 pretredu -= vector[i];
             }
-            pretredus.Text = "Pret redus: " + pretredu + " lei";
+            pretredus.Text = "Pret final: " + pretredu + " lei";
         }
 
         private void pretcurent_TextChanged(object sender, EventArgs e)
@@ -204,13 +202,24 @@ namespace pizza
         private void button3_Click(object sender, EventArgs e)
         {
             pretcurent.Text = "Pret neredus: 0 lei";
-            pretredus.Text = "Pret redus: 0 lei";
+            pretredus.Text = "Pret final: 0 lei";
             order.Text = "";
         }
 
         private void textBox1_TextChanged_1(object sender, EventArgs e)
         {
 
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            PopupNotifier popup = new PopupNotifier();
+            popup.TitleText = "Notification";
+            popup.ContentText = "Comanda dumneavoastra a fost plasata!\r\n" + pretredus.Text;
+            popup.Popup();
+            pretcurent.Text = "Pret neredus: 0 lei";
+            pretredus.Text = "Pret final: 0 lei";
+            order.Text = "";
         }
     }
 }

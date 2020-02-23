@@ -37,8 +37,8 @@
             this.button3 = new System.Windows.Forms.Button();
             this.ofertazilei = new System.Windows.Forms.TextBox();
             this.pretredus = new System.Windows.Forms.TextBox();
-            this.testbox = new System.Windows.Forms.TextBox();
-            this.testbox2 = new System.Windows.Forms.TextBox();
+            this.button4 = new System.Windows.Forms.Button();
+            this.button5 = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // pizzas
@@ -139,31 +139,35 @@
             this.pretredus.Name = "pretredus";
             this.pretredus.Size = new System.Drawing.Size(290, 34);
             this.pretredus.TabIndex = 8;
-            this.pretredus.Text = "Pret redus: 0 lei";
+            this.pretredus.Text = "Pret final: 0 lei";
             // 
-            // testbox
+            // button4
             // 
-            this.testbox.Location = new System.Drawing.Point(840, 317);
-            this.testbox.Multiline = true;
-            this.testbox.Name = "testbox";
-            this.testbox.Size = new System.Drawing.Size(384, 74);
-            this.testbox.TabIndex = 9;
+            this.button4.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button4.Location = new System.Drawing.Point(955, 333);
+            this.button4.Name = "button4";
+            this.button4.Size = new System.Drawing.Size(172, 83);
+            this.button4.TabIndex = 11;
+            this.button4.Text = "Finalizeaza comanda";
+            this.button4.UseVisualStyleBackColor = true;
+            this.button4.Click += new System.EventHandler(this.button4_Click);
             // 
-            // testbox2
+            // button5
             // 
-            this.testbox2.Location = new System.Drawing.Point(840, 407);
-            this.testbox2.Multiline = true;
-            this.testbox2.Name = "testbox2";
-            this.testbox2.Size = new System.Drawing.Size(384, 74);
-            this.testbox2.TabIndex = 10;
+            this.button5.Location = new System.Drawing.Point(53, 14);
+            this.button5.Name = "button5";
+            this.button5.Size = new System.Drawing.Size(8, 8);
+            this.button5.TabIndex = 12;
+            this.button5.Text = "button5";
+            this.button5.UseVisualStyleBackColor = true;
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1264, 626);
-            this.Controls.Add(this.testbox2);
-            this.Controls.Add(this.testbox);
+            this.Controls.Add(this.button5);
+            this.Controls.Add(this.button4);
             this.Controls.Add(this.pretredus);
             this.Controls.Add(this.ofertazilei);
             this.Controls.Add(this.button3);
@@ -192,8 +196,8 @@
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.TextBox ofertazilei;
         private System.Windows.Forms.TextBox pretredus;
-        private System.Windows.Forms.TextBox testbox;
-        private System.Windows.Forms.TextBox testbox2;
+        private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.Button button5;
     }
 }
 
